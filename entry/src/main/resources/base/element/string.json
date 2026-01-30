@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "StratoVirt"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "StratoVirt"
+    },
+    {
+      "name": "permission_camera_reason",
+      "value": "VM 设备通道可能需要摄像头权限"
+    },
+    {
+      "name": "permission_microphone_reason",
+      "value": "VM 设备通道可能需要麦克风权限"
+    }
+  ]
+}

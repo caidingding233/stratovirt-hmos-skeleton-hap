@@ -1,0 +1,57 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/caidingding233/.ohos/config/default_StratoVirt_W8pjvOy2qOI3VEv563QWY_bitBr2C1tBCe0FE5RD_NU=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B72F448E386238142F4735E9F9867F83736B5537E24A69EFCF8A77A740486065DBDA2ADC020F3FB",
+          "profile": "/Users/caidingding233/.ohos/config/default_StratoVirt_W8pjvOy2qOI3VEv563QWY_bitBr2C1tBCe0FE5RD_NU=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/caidingding233/.ohos/config/default_StratoVirt_W8pjvOy2qOI3VEv563QWY_bitBr2C1tBCe0FE5RD_NU=.p12",
+          "storePassword": "0000001B9A29FBC23AFCD6CB8B0D02D08DFDB70C2F20E7DE40A81B609166F357A105B2B9349FE372130306"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.0.2(22)",
+        "compatibleSdkVersion": "6.0.2(22)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "nativeCompiler": "BiSheng",
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

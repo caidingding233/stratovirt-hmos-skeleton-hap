@@ -1,0 +1,457 @@
+Device info:HUAWEI MateBook Pro
+Build info:HAD-W24 6.0.0.130(SP7CVAC00E102R12P9)
+Fingerprint:448baf2fd953c85d46267e23f557c87e2be20f4e69baba69007e5906e59a0977
+Timestamp:2026-01-31 06:14:55.584
+Module name:com.caidingding233.stratovirttest
+Version:1.0.0
+VersionCode:1000000
+PreInstalled:No
+Foreground:Yes
+Pid:43194
+Uid:20020196
+Process life time:1s
+Process Memory(kB): 67444(Rss)
+Device Memory(kB): Total 24432644, Free 4860036, Available 10770432
+Page switch history:
+  06:14:55.518 :enters foreground
+Reason:TypeError
+Error name:TypeError
+Error message:Cannot read property on of undefined
+Stacktrace:
+    at initVmEvents entry (entry/src/main/ets/pages/Index.ets:74:24)
+    at aboutToAppear entry (entry/src/main/ets/pages/Index.ets:70:10)
+HybridStack:
+#00 pc 00000000003b3e24 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#01 pc 0000000000214148 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#02 pc 00000000002138e0 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#03 pc 00000000002aaa18 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#04 pc 000000000073a654 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#05 pc 0000000000736168 /system/lib64/platformsdk/libark_jsruntime.so(panda::ecmascript::ObjectFactory::GetJSError(panda::ecmascript::base::ErrorType const&, char const*, panda::ecmascript::StackCheck)+152)(e2443df427997f015ba1d0f7003507b2)
+#06 pc 000000000058fc28 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#07 pc 0000000000812e4c /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#08 pc 0000000000e2714c /system/lib64/module/arkcompiler/stub.an(RTStub_CallRuntime+44)
+#09 pc 0000000000479ac8 /system/lib64/module/arkcompiler/stub.an(BCStub_HandleLdobjbynameImm8Id16StwCopy+5408)
+#10 at initVmEvents entry (entry/src/main/ets/pages/Index.ets:74:24)
+#11 at aboutToAppear entry (entry/src/main/ets/pages/Index.ets:70:10)
+#12 pc 0000000000444a44 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+#13 pc 000000000070c70c /system/lib64/platformsdk/libark_jsruntime.so(panda::FunctionRef::Call(panda::ecmascript::EcmaVM const*, panda::Local<panda::JSValueRef>, panda::Local<panda::JSValueRef> const*, int)+744)(e2443df427997f015ba1d0f7003507b2)
+#14 pc 0000000000a11d90 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#15 pc 0000000000adc960 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#16 pc 0000000000b3892c /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#17 pc 0000000000b387f0 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#18 pc 0000000000a47950 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::CustomNode::Render(long)+860)(a05b75547621c8b442e96358538cd6ae)
+#19 pc 0000000001c2054c /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::CustomNode::Build(std::__h::shared_ptr<std::__h::list<OHOS::Ace::NG::ExtraInfo, std::__h::allocator<OHOS::Ace::NG::ExtraInfo>>>)+64)(a05b75547621c8b442e96358538cd6ae)
+#20 pc 0000000000a47398 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::UINode::Build(std::__h::shared_ptr<std::__h::list<OHOS::Ace::NG::ExtraInfo, std::__h::allocator<OHOS::Ace::NG::ExtraInfo>>>)+2288)(a05b75547621c8b442e96358538cd6ae)
+#21 pc 00000000024abcbc /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::StageManager::PushPage(OHOS::Ace::RefPtr<OHOS::Ace::NG::FrameNode> const&, bool, bool, std::__h::function<bool ()> const&&)+592)(a05b75547621c8b442e96358538cd6ae)
+#22 pc 0000000001906fac /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#23 pc 0000000000c7f654 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#24 pc 0000000000c9030c /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#25 pc 0000000000c6d8b8 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#26 pc 0000000000c57964 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#27 pc 0000000000ec9704 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+#28 pc 000000000001bd8c /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventHandler::DistributeEvent(std::__h::unique_ptr<OHOS::AppExecFwk::InnerEvent, void (*)(OHOS::AppExecFwk::InnerEvent*)> const&)+1056)(6bba0f01b18608aee9015fcaf201de38)
+#29 pc 000000000002f974 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(6bba0f01b18608aee9015fcaf201de38)
+#30 pc 000000000002f228 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(6bba0f01b18608aee9015fcaf201de38)
+#31 pc 0000000000032440 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventRunner::Run()+544)(6bba0f01b18608aee9015fcaf201de38)
+#32 pc 00000000000d76d0 /system/lib64/platformsdk/libappkit_native.z.so(OHOS::AppExecFwk::MainThread::Start()+420)(289dcd01f795e0d8bf96f327108adceb)
+#33 pc 0000000000005990 /system/lib64/appspawn/appspawn/libappspawn_ace.z.so(096ab90bbe9a4669e88bc99a88d5e87a)
+#34 pc 000000000000c574 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+#35 pc 0000000000017da4 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+#36 pc 0000000000015408 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+#37 pc 0000000000017910 /system/lib64/chipset-sdk-sp/libbegetutil.z.so(11d3c199efc0f1cd19a1bf1741c864ba)
+#38 pc 000000000001739c /system/lib64/chipset-sdk-sp/libbegetutil.z.so(11d3c199efc0f1cd19a1bf1741c864ba)
+#39 pc 0000000000014a2c /system/lib64/chipset-sdk-sp/libbegetutil.z.so(11d3c199efc0f1cd19a1bf1741c864ba)
+#40 pc 00000000000145ec /system/lib64/chipset-sdk-sp/libbegetutil.z.so(11d3c199efc0f1cd19a1bf1741c864ba)
+#41 pc 0000000000012654 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+#42 pc 000000000000fdd4 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+#43 pc 00000000000a97b4 /system/lib/ld-musl-aarch64.so.1(e149314fc8628254830ba2c3a4623ada)
+#44 pc 000000000000c338 /system/bin/appspawn(78a28f069cce5bb04ee9a2df10e7cbc8)
+
+HiLog:
+01-31 06:14:55.434 43194 43194 I C02C11/appspawn/APPSPAWN: AppSpawnChild id 1326 flags:0xc
+01-31 06:14:55.435 43194 43194 I C02C02/PARAM: ResetParamSecurityLabel Fd:17
+01-31 06:14:55.435 43194 43194 I C02C11/.caidingding233.stratovirttest/APPSPAWN: [appspawn_isolate.c:158]ioctl ADD_ISOLATE_DIR_CMD success
+01-31 06:14:55.436 43194 43194 I C02D33/.caidingding233.stratovirttest/HitraceOption: FilterAppTrace com.caidingding233.stratovirttest 43194
+01-31 06:14:55.444 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /system/data to /mnt/sandbox/100/com.caidingding233.stratovirttest/system/data
+01-31 06:14:55.444 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /vendor/lib to /mnt/sandbox/100/com.caidingding233.stratovirttest/vendor/lib
+01-31 06:14:55.445 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /data/app/el1/public/aot_compiler/ark_cache/com.caidingding233.stratovirttest to /mnt/sandbox/100/com.caidingding233.stratovirttest/data/storage/ark-cache
+01-31 06:14:55.445 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: check dir /data/app/el1/public/aot_compiler/ark_cache/com.caidingding233.stratovirttest failed,strerror:No such file or directory
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:13 private mount to /mnt/sandbox/100/com.caidingding233.stratovirttest/chip_prod/etc/passthrough '524288' failed
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:13 private mount to /mnt/sandbox/100/com.caidingding233.stratovirttest/vendor/etc/vulkan '524288' failed
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /vendor/etc/silk to /mnt/sandbox/100/com.caidingding233.stratovirttest/vendor/etc/silk
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /system/asan/lib64 to /mnt/sandbox/100/com.caidingding233.stratovirttest/system/asan/lib64
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /vendor/asan/lib64 to /mnt/sandbox/100/com.caidingding233.stratovirttest/vendor/asan/lib64
+01-31 06:14:55.447 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /chip_prod/lib64/passthrough to /mnt/sandbox/100/com.caidingding233.stratovirttest/chip_prod/lib64/passthrough
+01-31 06:14:55.448 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /system/app/ohos.global.systemres to /mnt/sandbox/100/com.caidingding233.stratovirttest/data/global/systemResources
+01-31 06:14:55.448 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /data/app/el1/bundle/100/hnp/com.caidingding233.stratovirttest to /mnt/sandbox/100/com.caidingding233.stratovirttest/data/app
+01-31 06:14:55.448 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: check dir /data/app/el1/bundle/100/hnp/com.caidingding233.stratovirttest failed,strerror:No such file or directory
+01-31 06:14:55.449 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /data/preload/app to /mnt/sandbox/100/com.caidingding233.stratovirttest/data/preload/app
+01-31 06:14:55.449 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: errno:2 bind mount /data/app/el1/bundle/100/hnp/com.caidingding233.stratovirttest to /mnt/sandbox/100/com.caidingding233.stratovirttest/data/app
+01-31 06:14:55.449 43194 43194 W C02C11/.caidingding233.stratovirttest/APPSPAWN: check dir /data/app/el1/bundle/100/hnp/com.caidingding233.stratovirttest failed,strerror:No such file or directory
+01-31 06:14:55.453 43194 43194 I C02C11/.caidingding233.stratovirttest/APPSPAWN: path /data/storage/shader_cache/cloud mode 0x3
+01-31 06:14:55.453 43194 43194 I C02C11/.caidingding233.stratovirttest/APPSPAWN: path /storage/Users/currentUser/Download/com.caidingding233.stratovirttest mode 0x3
+01-31 06:14:55.453 43194 43194 E C05A06/.caidingding233.stratovirttest/CODE_SIGN: [XpmIoctl]:Ioctl cmd 40087803 failed: Invalid argument (ignore)
+01-31 06:14:55.457 43194 43194 I C05A05/.caidingding233.stratovirttest/SecCompEnhanceClient: [RegisterCheckCallback]Register secComp: sessionId=2162464201, seqNum=******325.
+01-31 06:14:55.458 43194 43194 I C02D0B/.caidingding233.stratovirttest/HICHECKER: hichecker param is empty.
+01-31 06:14:55.458 43194 43194 I C04500/.caidingding233.stratovirttest/webview: SelectWebcoreBeforeProcessRun: SelectWebcoreBeforeProcessRun for app com.caidingding233.stratovirttest.
+01-31 06:14:55.458 43194 43194 I C02C11/.caidingding233.stratovirttest/APPSPAWN: ClearEnvAndReturnSuccess 4
+01-31 06:14:55.459 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD3066]mainthread start, pid:43194
+01-31 06:14:55.460 43194 43194 I C01719/.caidingding233.stratovirttest/ffrt: 2:QueueMonitor:46 timeout:30000000 us
+01-31 06:14:55.462 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD425]attach
+01-31 06:14:55.464 43194 43293 I C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD819]ScheduleLaunchAbility called, ability EntryAbility, type is 1.
+01-31 06:14:55.465 43194 43194 I C03900/.caidingding233.stratovirttest/ACE_UIContent: [69]AceForwardCompatibility [com.caidingding233.stratovirttest] force:1 newpipe:1
+01-31 06:14:55.467 43194 43194 E C01321/.caidingding233.stratovirttest/JsRuntime: [js_runtime962]verify access token failed: -1
+01-31 06:14:55.468 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD1751]SmartGC: process is start. enable warm startup SmartGC: 0
+01-31 06:14:55.468 43194 43302 W C01719/.caidingding233.stratovirttest/ffrt: 3:operator():110 [-1458673272] set priority warn ret[1] eno[0]
+01-31 06:14:55.468 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] asmint: 1, aot: 0, jit: 1, baseline jit: 0, bundle name: com.caidingding233.stratovirttest
+01-31 06:14:55.469 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] multi-thread check enabled: 0
+01-31 06:14:55.469 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [pgo] reset pgo profiler, pgo profiler is disabled
+01-31 06:14:55.469 43194 43194 I C03301/.caidingding233.stratovirttest/LIBUV: init:5872
+01-31 06:14:55.469 43194 43194 I C03301/.caidingding233.stratovirttest/LIBUV: init:5872, backend_fd:24
+01-31 06:14:55.469 43194 43194 I C03301/.caidingding233.stratovirttest/LIBUV: open:5872, pipefd[0]:27
+01-31 06:14:55.470 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] can not find aot file
+01-31 06:14:55.476 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 120, in function: OnLoadExtNativeStartupTask] [HookTag] LoadBehaviorMonitorStartupTask start
+01-31 06:14:55.478 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: StartServer, componentName = <private>
+01-31 06:14:55.478 43194 43194 W C01321/.caidingding233.stratovirttest/JsRuntime: [CSM162]not Connected
+01-31 06:14:55.478 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] JSNApi::NotifyDebugMode, tid = 43194, debugApp = 1, isDebugMode = 0, instanceId = 0
+01-31 06:14:55.479 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [compiler] __jit_debug_register_code() is called.
+01-31 06:14:55.479 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [compiler] success to register stub.an to debugger.
+01-31 06:14:55.480 43194 43322 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.hdc.jdwp remoteWatcherId 1633 success
+01-31 06:14:55.480 43194 43322 I C02D13/.caidingding233.stratovirttest/HDC_LOG: AddWatchHdcdJdwp rc:0
+01-31 06:14:55.481 43194 43322 I C02D13/.caidingding233.stratovirttest/HDC_LOG: connect success cfd:32
+01-31 06:14:55.481 43194 43322 I C02D13/.caidingding233.stratovirttest/HDC_LOG: Send2Jdwp send pid:43194, pp:com.caidingding233.stratovirttest, isDebug:1, msglen:45
+01-31 06:14:55.481 43194 43194 W C01E00/.caidingding233.stratovirttest/ResourceManager: update userId, currentUserId_= 0, userId= 100
+01-31 06:14:55.486 43194 43301 I C01317/.caidingding233.stratovirttest/AppKit: [DRH375]success to AclSetAccess, path: /data/storage/el2/base/cache/rawheap
+01-31 06:14:55.487 43194 43326 W C01653/.caidingding233.stratovirttest/NativePreferences: LoadFromDisk: The settingXml /***/el1/***/i18*** load failed.
+01-31 06:14:55.493 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [application_cleaner94]ClearTempData
+01-31 06:14:55.494 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 112, in function: RunTask] [HookTag] current pid = 43194
+01-31 06:14:55.494 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 101, in function: IsSupportHook] [HookTag] IsTargetHap: true.
+01-31 06:14:55.494 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 70, in function: RegisterMonitorCallback] [HookTag] register monitor call back to vps behavior monitro start
+01-31 06:14:55.494 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 471, in function: RegisterMonitorCallBack] enter VirusProtectionServiceManagerClient RegisterMonitorCallBack
+01-31 06:14:55.496 43194 43301 I C02F36/.caidingding233.stratovirttest/VIRUS_PROTECTION_SERVICE: [nodict][line: 78, in function: RegisterMonitorCallback] [HookTag] register monitor call back to vps behavior monitro end
+01-31 06:14:55.496 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [js_ability_stage190]AbilityStage::LoadModule
+01-31 06:14:55.496 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [js_ability_stage935]null stage
+01-31 06:14:55.496 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [js_ability_stage233]Not found AbilityStage.js
+01-31 06:14:55.497 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA348]called
+01-31 06:14:55.497 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] start to execute module buffer with secure memory: /data/storage/el1/bundle/entry/ets/entryability/EntryAbility.abc
+01-31 06:14:55.497 43194 43304 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [pgo] will save profiler to file /data/storage/ark-profile/rt_entry.ap
+01-31 06:14:55.499 43194 43194 I C01320/.caidingding233.stratovirttest/JsEnv: [js_environment290]timing: 1
+01-31 06:14:55.499 43194 43194 I C01320/.caidingding233.stratovirttest/JSENV: Callee constructor is OK string
+01-31 06:14:55.499 43194 43194 I C01320/.caidingding233.stratovirttest/JSENV: Ability::constructor callee is object [object Object]
+01-31 06:14:55.500 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA393]End
+01-31 06:14:55.500 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [ui_ability_thread169]Lifecycle:Attach
+01-31 06:14:55.501 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD2710]called
+01-31 06:14:55.501 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [gc] app is not inBackground
+01-31 06:14:55.502 43194 43298 I C01332/.caidingding233.stratovirttest/UIAbility: [ui_ability_thread317]name:EntryAbility,targeState:5,isNewWant:0
+01-31 06:14:55.503 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [ui_ability_thread236]Lifecycle:name EntryAbility
+01-31 06:14:55.503 43194 43194 I C04201/.caidingding233.stratovirttest/DMS: AddDisplayIdFromAms: abilityToken and display[0] has been added.
+01-31 06:14:55.504 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onCreate
+01-31 06:14:55.505 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [ohos_application1111]current 2, pre 0
+01-31 06:14:55.505 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [ohos_application1140]fontSize empty
+01-31 06:14:55.505 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [ohos_application1171]current 2, pre 0
+01-31 06:14:55.505 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [ohos_application1175]language empty
+01-31 06:14:55.505 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [ohos_application1194]language and locale empty
+01-31 06:14:55.505 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [ohos_application287]configuration_: {"0#const.build.characteristics":"2in1","0#input.pointer.device":"true","0#ohos.app.fontSizeScale":"nonFollowSystem","0#ohos.application.densitydpi":"xldpi","0#ohos.application.direction":"horizontal","0#ohos.application.displayid":"0","0#ohos.system.colorMode":"dark","0#ohos.system.colorMode.isSetByApp":"isSetByApp","0#ohos.system.fontSizeScale":"1.0","0#ohos.system.fontWeightScale":"1.000000","0#ohos.system.hour":"default","0#ohos.system.language":"zh-Hans-CN","0#ohos.system.locale":"zh-Hans-CN","0#ohos.system.mcc":"460","0#ohos.system.mnc":"01"}, config: {"0#ohos.system.colorMode":"dark","0#ohos.system.colorMode.isSetByApp":"isSetByApp"}
+01-31 06:14:55.505 43194 43194 E C04217/.caidingding233.stratovirttest/WMSAttribute: UpdateConfigurationSyncForAll: root is null
+01-31 06:14:55.505 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onConfigurationUpdated
+01-31 06:14:55.505 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onConfigurationUpdated, time: 0
+01-31 06:14:55.505 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onConfigurationUpdate
+01-31 06:14:55.505 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onConfigurationUpdate, time: 0
+01-31 06:14:55.505 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [js_ability_stage822]Not found AbilityStage.js
+01-31 06:14:55.505 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [js_ability_stage822]Not found AbilityStage.js
+01-31 06:14:55.505 43194 43194 I C01317/.caidingding233.stratovirttest/AppKit: [ohos_application311]ignoreWindowContext size 0
+01-31 06:14:55.505 43194 43194 E C04217/.caidingding233.stratovirttest/WMSAttribute: UpdateConfigurationForAll: root is null
+01-31 06:14:55.505 43194 43194 I A00000/.caidingding233.stratovirttest/testTag: Ability onCreate
+01-31 06:14:55.505 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onCreate, time: 1
+01-31 06:14:55.505 43194 43194 E C01332/.caidingding233.stratovirttest/UIAbility: [ui_ability_impl305]hasSaveData_: false
+01-31 06:14:55.505 43194 43194 W C01332/.caidingding233.stratovirttest/UIAbility: [JUA1088]formatRegex: []
+01-31 06:14:55.506 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: Init: WindowScene with window session!
+01-31 06:14:55.506 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: Init: set isModuleAbilityHookEnd
+01-31 06:14:55.506 43194 43194 I C04204/.caidingding233.stratovirttest/WMSScb: RS multi-instance enabled: 1, deviceType 2in1
+01-31 06:14:55.507 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSLogManager init log flag: 0x0(0)
+01-31 06:14:55.507 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSFrameRateLinker::Create id: 185516817383424
+01-31 06:14:55.507 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: VsyncStation: id 185516817383425 created
+01-31 06:14:55.507 43194 43194 I C04200/.caidingding233.stratovirttest/WindowSceneSessionImpl: WindowSceneSessionImpl: [WMSCom] Constructor stratovirttest0
+01-31 06:14:55.507 43194 43194 E C04200/.caidingding233.stratovirttest/WMS: SetWindowType: permission denied!
+01-31 06:14:55.507 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Create: Window Create name:stratovirttest0, state:0, mode:0
+01-31 06:14:55.507 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Create: SetIsAbilityHookOff 0
+01-31 06:14:55.507 43194 43194 W C0420A/.caidingding233.stratovirttest/WMSLife: IsWindowSessionInvalid: already destroyed or not created! id: 0 state_: 0
+01-31 06:14:55.507 43194 43194 W C04200/.caidingding233.stratovirttest/WindowSceneSessionImpl: AdjustWindowAnimationFlag: session invalid!
+01-31 06:14:55.507 43194 43194 I C04200/.caidingding233.stratovirttest/WindowSceneSessionImpl: Remove window flag WINDOW_FLAG_SHOW_WHEN_LOCKED
+01-31 06:14:55.508 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Connect: in
+01-31 06:14:55.508 43194 43298 I C04208/.caidingding233.stratovirttest/WMSLayout: NotifyAppHookWindowInfoUpdated: in
+01-31 06:14:55.509 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: Connect: updateRect when connect.preRect:[0,0,0,0]rect:[515,318,2090,1394]
+01-31 06:14:55.509 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Connect: Window Connect [name:stratovirttest0, id:131, type:1], ret:0
+01-31 06:14:55.509 43194 43194 I C04218/.caidingding233.stratovirttest/WMSPc: MakeSubOrDialogWindowDragableAndMoveble: Called 131.
+01-31 06:14:55.509 43194 43194 I C04200/.caidingding233.stratovirttest/WindowSceneSessionImpl: UpdateWindowState: UpdateWindowMode 131 mode 102
+01-31 06:14:55.509 43194 43298 I C04208/.caidingding233.stratovirttest/WMSLayout: SetAppHookWindowInfo: Id:131, preHookWindowInfo:[enableHookWindow: false, widthHookRatio: 1.000000], newHookWindowInfo:[enableHookWindow: false, widthHookRatio: 1.000000]
+01-31 06:14:55.509 43194 43298 I C0421D/.caidingding233.stratovirttest/WMSRotation: SetCurrentRotation: currentRotation: 0
+01-31 06:14:55.509 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: NotifyWindowStatusChange: id:131, windowMode:102, windowStatus:4, lastWindowStatus:0, skipRedundantWindowStatusNotifications:0
+01-31 06:14:55.509 43194 43292 I C04208/.caidingding233.stratovirttest/WMSLayout: UpdateRect: id:131 name:stratovirttest0 rect:[515 318 2090 1394]->[515 318 2090 1394] reason:0 displayId:0
+01-31 06:14:55.509 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: SetConfigWindowLimitsVP: id:131, windowLimits:[0 0 0 0 0.000000 0.000000 1.000000 1]
+01-31 06:14:55.509 43194 43292 W C04208/.caidingding233.stratovirttest/WMSLayout: NotifySingleHandTransformChange: id:131, uiContent is nullptr
+01-31 06:14:55.509 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: GetSystemSizeLimits: px[6192,6192,516,116], vp[3840,3840,320,72], configMax:3840, vpr:1.612500, winType:1
+01-31 06:14:55.510 43194 43194 I C0421A/.caidingding233.stratovirttest/WMSLayoutPc: GetSupportedWindowModesConfiguration: winId: 131, windowModeSupportType: 15
+01-31 06:14:55.510 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: GetConfigurationFromAbilityInfo: windowId: 131, windowModeSupportType: 15, isAncoSupportMultiWindow: 0, isAncoInPcOrPcMode:0
+01-31 06:14:55.510 43194 43194 I C0420F/.caidingding233.stratovirttest/WMSRecover: RegisterSessionRecoverCallbackFunc: persistentId=131
+01-31 06:14:55.510 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: UpdateDefaultStatusBarColor: win=131, appColor=dark
+01-31 06:14:55.510 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: SetSpecificBarProperty: win [131 stratovirttest0] type 2108 1 ffffff ffffffff 0 4
+01-31 06:14:55.510 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: IsMainHandlerAvailable: id:131, isAvailable:1
+01-31 06:14:55.510 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: IsMainHandlerAvailable: id:131, isAvailable:1
+01-31 06:14:55.510 43194 43194 I C02800/.caidingding233.stratovirttest/InputManagerImpl: [][SetWindowInputEventConsumer:364] enter
+01-31 06:14:55.511 43194 43194 I C02800/.caidingding233.stratovirttest/MMIClient: [][OnConnected:267] Connection to server succeeded, fd:39
+01-31 06:14:55.511 43194 43194 I C02800/.caidingding233.stratovirttest/MMIClient: [][AddFdListener:166] Server was listening
+01-31 06:14:55.511 43194 43194 I C02800/.caidingding233.stratovirttest/MMIClient: [][StartEventRunner:127] reuse current event handler, thread name:
+01-31 06:14:55.511 43194 43194 I C02800/.caidingding233.stratovirttest/MMIClient: [][StartEventRunner:130] File fd is in listening
+01-31 06:14:55.511 43194 43194 I C02800/.caidingding233.stratovirttest/InputManagerImpl: [][SetWindowInputEventConsumer] leave
+01-31 06:14:55.511 43194 43194 I C0420C/.caidingding233.stratovirttest/WMSEvent: AddInputWindow: SetWindowInputEventConsumer success, wid:131
+01-31 06:14:55.511 43194 43194 I C0420C/.caidingding233.stratovirttest/WMSEvent: LoadGameController: in
+01-31 06:14:55.513 43194 43194 I C04732/.caidingding233.stratovirttest/GameController: [(RegisterEntryModule:24)]begin load gamecontroller_event
+01-31 06:14:55.513 43194 43194 I C04732/.caidingding233.stratovirttest/GameController: [(StartInputToTouch:57)]Begin StartInputToTouch
+01-31 06:14:55.514 43194 43194 I C0420C/.caidingding233.stratovirttest/WMSEvent: LoadGameController: dlopen GameController success
+01-31 06:14:55.514 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: ConnectServer: start connect
+01-31 06:14:55.514 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: ConnectServer: end connect
+01-31 06:14:55.514 43194 43194 W C04217/.caidingding233.stratovirttest/WMSAttribute: RegisterGetWMSWindowListCallback: callback has registered
+01-31 06:14:55.514 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: RegisterGetWMSWindowListCallback: winId: 131
+01-31 06:14:55.514 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: UpdateColorMode: winId: 131, colorMode: dark
+01-31 06:14:55.514 43194 43194 I C04218/.caidingding233.stratovirttest/WMSPc: UpdateSidebarBlurStyleWhenColorModeChange: in, persistentId=131
+01-31 06:14:55.514 43194 43194 W C04218/.caidingding233.stratovirttest/WMSPc: UpdateSidebarBlurStyleWhenColorModeChange: RSAnimatableProperty is null
+01-31 06:14:55.514 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: UpdateColorMode: winId: 131, colorMode: dark, hasDarkRes: 1
+01-31 06:14:55.514 43194 43194 I C0421C/.caidingding233.stratovirttest/WMSCompat: SetPcAppInpadSpecificSystemBarInvisible: isPcAppInpadSpecificSystemBarInvisible: 0
+01-31 06:14:55.514 43194 43194 I C0421C/.caidingding233.stratovirttest/WMSCompat: SetPcAppInpadOrientationLandscape: isPcAppInpadOrientationLandscape: 0
+01-31 06:14:55.514 43194 43194 E C04200/.caidingding233.stratovirttest/WMS: singleton_container.cpp GetSingleton: cant get OHOS::Rosen::WindowInfoReporter
+01-31 06:14:55.514 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onWindowStageCreate
+01-31 06:14:55.514 43194 43194 I A00000/.caidingding233.stratovirttest/testTag: Ability onWindowStageCreate
+01-31 06:14:55.514 43194 43194 I C04200/.caidingding233.stratovirttest/JsWindowStage: LoadContent: [NAPI]
+01-31 06:14:55.514 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onWindowStageCreate, time: 0
+01-31 06:14:55.514 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onWillForeground
+01-31 06:14:55.514 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onWillForeground, time: 0
+01-31 06:14:55.514 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: GoForeground: reason: 4
+01-31 06:14:55.514 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Show: Window show [name: stratovirttest0, id: 131, type: 1], reason: 4, state:1, requestState:1
+01-31 06:14:55.515 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: GetSystemSizeLimits: px[6192,6192,516,116], vp[3840,3840,320,72], configMax:3840, vpr:1.612500, winType:1
+01-31 06:14:55.515 43194 43341 I C04732/.caidingding233.stratovirttest/GameController: [(GetSelfBundleName:49)]The current bundleName [com.caidingding233.stratovirttest]. version [1.0.0]
+01-31 06:14:55.515 43194 43341 I C04732/.caidingding233.stratovirttest/GameController: [(IsCommonApp:88)]The [com.caidingding233.stratovirttest] is a common app.
+01-31 06:14:55.515 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: IsSystemDensityChanged: windowId: 131, lastDensity: -1.000000, currDensity: 1.612500
+01-31 06:14:55.515 43194 43194 W C04200/.caidingding233.stratovirttest/WindowSessionImpl: UpdateViewportConfig: uiContent is null!
+01-31 06:14:55.516 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [ui_ability_impl430]wnd call, AfterForeground
+01-31 06:14:55.516 43194 43194 W C0420A/.caidingding233.stratovirttest/WMSLife: GetAttachStateSyncResult: lifecycleCallback is null
+01-31 06:14:55.516 43194 43341 I C04732/.caidingding233.stratovirttest/GameController: [(ReadJsonFromFile:214)]load game_support_key_mapping.json file success.
+01-31 06:14:55.516 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSFrameRateLinker::Create id: 185516817383425
+01-31 06:14:55.516 43194 43341 I C04732/.caidingding233.stratovirttest/GameController: [(DoAsyncTask:71)]The app does not support input-to-touch feature.
+01-31 06:14:55.516 43194 43194 I C01706/.caidingding233.stratovirttest/RsFrameReportExt: RsFrameReportExt:[LoadLibrary] load library success!
+01-31 06:14:55.516 43194 43194 I C01706/.caidingding233.stratovirttest/RsFrameReportExt: RsFrameReportExt:[Init] dlopen libframe_ui_intf.so success!
+01-31 06:14:55.517 43194 43292 I C04207/.caidingding233.stratovirttest/WMSFocus: UpdateFocusState: focus: 1, id: 131
+01-31 06:14:55.517 43194 43292 I C04207/.caidingding233.stratovirttest/WMSFocus: NotifyHighlightChange: windowId: 131, isHighlight: 1,
+01-31 06:14:55.517 43194 43292 W C04208/.caidingding233.stratovirttest/WMSLayout: NotifySingleHandTransformChange: id:131, uiContent is nullptr
+01-31 06:14:55.518 43194 43194 I C01706/.caidingding233.stratovirttest/ueaClient-FrameUiIntf: [Init]:ret:1, inited:1
+01-31 06:14:55.518 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: InitWaterfallMode: winId: 131
+01-31 06:14:55.518 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: NotifyWaterfallModeChange: winId: 131, waterfall: 0, stat: 2
+01-31 06:14:55.518 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterDidForeground: reason: 4
+01-31 06:14:55.518 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: NotifyFreeMultiWindowModeResume: IsPcMode 1, isColdStart 1
+01-31 06:14:55.518 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Show: Window show success [name:stratovirttest0, id:131, type:1]
+01-31 06:14:55.518 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: NotifyWindowStatusChange: id:131, windowMode:102, windowStatus:4, lastWindowStatus:4, skipRedundantWindowStatusNotifications:0
+01-31 06:14:55.518 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: NotifyWindowStatusDidChange: Id:131, WindowMode:102, windowStatus:4, lastWindowStatus:0, listenerSize:0, rect:[515 318 2090 1394]
+01-31 06:14:55.518 43194 43194 W C04201/.caidingding233.stratovirttest/DMS: OnDisplayInfoChange: data is not changed.
+01-31 06:14:55.518 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onForeground
+01-31 06:14:55.518 43194 43194 I A00000/.caidingding233.stratovirttest/testTag: Ability onForeground
+01-31 06:14:55.518 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onForeground, time: 0
+01-31 06:14:55.519 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterDidForeground execute
+01-31 06:14:55.519 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1854]JsUIAbility call js, name: onDidForeground
+01-31 06:14:55.519 43194 43194 I C01332/.caidingding233.stratovirttest/UIAbility: [JUA1899]end, name: onDidForeground, time: 0
+01-31 06:14:55.519 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: GoResume: in
+01-31 06:14:55.519 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: Resume: in, isColdStart: 1, isDidForeground: 0
+01-31 06:14:55.519 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: in
+01-31 06:14:55.519 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: SetUIContentInner: pages/Index, state:2, persistentId: 131
+01-31 06:14:55.519 43194 43194 I C0420A/.caidingding233.stratovirttest/WMSLife: SetUIContentComplete: persistentId=131
+01-31 06:14:55.519 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-1:-1:undefined)] CreateUIContent.
+01-31 06:14:55.519 43194 43194 I C03934/.caidingding233.stratovirttest/AceUIEvent: [(-1:-1:undefined)] report ace loaded
+01-31 06:14:55.520 43194 43194 I C04707/.caidingding233.stratovirttest/HaAceEngine: OnAceLoaded end
+01-31 06:14:55.520 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] Init RenderService UniRender Type:0
+01-31 06:14:55.520 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] [com.caidingding233.stratovirttest][entry][-1]: UIContent: apiCompatibleVersion: 60002022, apiTargetVersion: 60002022, and apiReleaseType: Release, useNewPipe: 1
+01-31 06:14:55.521 43194 43194 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.sys.arkui.animationscale remoteWatcherId 1633 success
+01-31 06:14:55.521 43194 43339 I C03900/.caidingding233.stratovirttest/Ace: [(-1:-1:undefined)] AnimationScale: 2.000000 -> 2.000000
+01-31 06:14:55.521 43194 43194 E C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] ConfigXMLParserBase read system file failed
+01-31 06:14:55.521 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] ArkUiFeatureParamManager failed to load xml file
+01-31 06:14:55.521 43194 43194 E C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] ConfigXMLParserBase read system UI correction config file failed
+01-31 06:14:55.521 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] ArkUiFeatureParamManager failed to load UI correction config file
+01-31 06:14:55.521 43194 43295 I C02D06/.caidingding233.stratovirttest/XCollie: Start init Async Stack.
+01-31 06:14:55.521 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] SetLocale language tag: zh-CN, select language: zh-CN
+01-31 06:14:55.521 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] [com.caidingding233.stratovirttest][entry][-1]: SetLanguage: zh, colorMode: dark, deviceAccess: 1
+01-31 06:14:55.521 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:-1:undefined)] [com.caidingding233.stratovirttest][entry][-1]: Initialize UIContent isModelJson:true
+01-31 06:14:55.523 43194 43194 I C03922/.caidingding233.stratovirttest/AceNavigation: [(-2:-1:undefined)] subscribe hsp Update successfully
+01-31 06:14:55.523 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] SetHapPath, Use hap path to load resource
+01-31 06:14:55.523 43194 43194 I C04217/.caidingding233.stratovirttest/WMSAttribute: RegisterWaterfallModeChangeListener: winId: 131
+01-31 06:14:55.524 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: GetSurfaceNode: name:stratovirttest0, id:131
+01-31 06:14:55.524 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: GetSurfaceNode: name:stratovirttest0, id:131
+01-31 06:14:55.524 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] SetRSSurfaceNode 185516817383425
+01-31 06:14:55.524 43194 43194 E C01406/.caidingding233.stratovirttest/OHOS::RS: RSRenderNodeDrawableAdapter::OnGenerate, node type 1 is not supported
+01-31 06:14:55.524 43194 43194 E C01406/.caidingding233.stratovirttest/skia: RSRenderNode::InitRenderParams failed
+01-31 06:14:55.524 43194 43194 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.sys.graphic.animationscale remoteWatcherId 1633 success
+01-31 06:14:55.526 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSSurfaceNode::SetAbilityState, surfaceNodeId:[185516817383425], ability state: foreground
+01-31 06:14:55.526 43194 43194 I C03925/.caidingding233.stratovirttest/AceRouter: [(100000:100000:scope)] will create parallel PageRouterManager!
+01-31 06:14:55.527 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] Invalid config:zh_CN-long-notround-horizontal-dark-tablet-hdpi
+01-31 06:14:55.527 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSSurfaceNode::SetAbilityState, surfaceNodeId:[185516817383425], ability state: background
+01-31 06:14:55.527 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] set translateManager to pipeline, instanceId:100000
+01-31 06:14:55.527 43194 43194 I C0421D/.caidingding233.stratovirttest/WMSRotation: RegisterOrientationChangeListener: in
+01-31 06:14:55.527 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] AddPersistAfterLayoutTask size: 1
+01-31 06:14:55.528 43194 43194 I C03919/.caidingding233.stratovirttest/AceInputTracking: [(100000:100000:scope)] Debug touch pass mode 0
+01-31 06:14:55.528 43194 43194 W C03F00/MUSL-LDSO: load absolute_path /system/lib64/libtransform_interaction_ext.z.so: check ns accessible failed namespace=ndk.
+01-31 06:14:55.528 43194 43194 W C03F00/MUSL-LDSO: load /system/lib64/libtransform_interaction_ext.z.so failed, namespace=ndk no inherits, errno=2
+01-31 06:14:55.528 43194 43194 W C03F00/MUSL-LDSO: load /system/lib64/libtransform_interaction_ext.z.so failed, namespace=default, errno=2
+01-31 06:14:55.528 43194 43194 W C03F00/MUSL-LDSO: dlopen_impl load library header failed for /system/lib64/libtransform_interaction_ext.z.so
+01-31 06:14:55.528 43194 43194 E C03934/.caidingding233.stratovirttest/AceUIEvent: [(100000:100000:scope)] AceTransform load failed: Error loading shared library /system/lib64/libtransform_interaction_ext.z.so: No such file or directory
+01-31 06:14:55.528 43194 43194 I C03937/.caidingding233.stratovirttest/AceResource: [(100000:100000:scope)] ResourceAdapter UpdateResConfig with colorMode dark
+01-31 06:14:55.528 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] not found systemTheme in HapModuleInfo, loading default OHOS_THEME
+01-31 06:14:55.528 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] Cannot Get File List from resources/styles/
+01-31 06:14:55.528 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] GetAsset failed: resources/styles/default.json
+01-31 06:14:55.530 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAppUseControlStatus: isUseControl: 0, state_: 2, persistentId: 131
+01-31 06:14:55.530 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: in
+01-31 06:14:55.530 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: window has been in interactive status
+01-31 06:14:55.535 43194 43295 I C02D06/.caidingding233.stratovirttest/XCollie: Init async stack successfully.
+01-31 06:14:55.535 43194 43295 I C02D06/.caidingding233.stratovirttest/XCollie: Finish init Async Stack.
+01-31 06:14:55.535 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] root node OnAttachToFrameNode, id:0
+01-31 06:14:55.535 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] Rosenwindow set root, rsId:185516817383427
+01-31 06:14:55.536 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] ContainerModalViewEnhance BuildTitle called
+01-31 06:14:55.536 43194 43194 E C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] read abc file success!
+01-31 06:14:55.542 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] ContainerModalViewEnhance BuildTitle called
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains icon_primary!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains icon_on_primary!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains interactive_hover!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains interactive_click!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains warning!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains window_left_screen!
+01-31 06:14:55.542 43194 43194 W C03926/.caidingding233.stratovirttest/AceTheme: [(100000:100000:scope)] style container_modal_pattern not contains window_right_screen!
+01-31 06:14:55.542 43194 43194 E C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] read abc file success!
+01-31 06:14:55.543 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAppUseControlStatus: isUseControl: 0, state_: 2, persistentId: 131
+01-31 06:14:55.543 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: in
+01-31 06:14:55.543 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: window has been in interactive status
+01-31 06:14:55.545 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] ContainerModalViewEnhance BuildCustomButtonRow called
+01-31 06:14:55.545 43194 43194 E C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] read abc file success!
+01-31 06:14:55.549 43194 43194 I C02B61/.caidingding233.stratovirttest/ImageSource: CreatePixelMap success, id:1769811295547897,dSize:0,0,sSize:512,512,dHdr:1,sHdr:1,memType:2,cost 1301 us
+01-31 06:14:55.552 43194 43194 I C02B61/.caidingding233.stratovirttest/ImageSource: CreatePixelMap success, id:1769811295550034,dSize:0,0,sSize:512,512,dHdr:1,sHdr:1,memType:2,cost 2129 us
+01-31 06:14:55.552 43194 43194 I C02B61/.caidingding233.stratovirttest/ImageSource: CreatePixelMap success, id:1769811295552317,dSize:0,0,sSize:192,192,dHdr:1,sHdr:1,memType:2,cost 272 us
+01-31 06:14:55.554 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAppUseControlStatus: isUseControl: 0, state_: 2, persistentId: 131
+01-31 06:14:55.554 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: in
+01-31 06:14:55.554 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: window has been in interactive status
+01-31 06:14:55.556 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] SetAppIcon successfully
+01-31 06:14:55.556 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] SetAppTitle successfully
+01-31 06:14:55.556 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] SetColorConfigurationUpdate
+01-31 06:14:55.556 43194 43194 I C03952/.caidingding233.stratovirttest/AceAppBar: [(100000:100000:scope)] SetColorConfigurationUpdate isDark = 1
+01-31 06:14:55.556 43194 43194 I C02220/.caidingding233.stratovirttest/IntentionClient: in Connect, enter
+01-31 06:14:55.557 43194 43194 I C02220/.caidingding233.stratovirttest/IntentionClient: in Connect, Connecting IntentionService success
+01-31 06:14:55.557 43194 43194 I C02220/.caidingding233.stratovirttest/IntentionClient: in Connect, leave
+01-31 06:14:55.557 43194 43194 E C01D02/.caidingding233.stratovirttest/accessibility_asacfwk: [(AccessibilitySystemAbilityClientImpl:57)]accessibility service is ready.
+01-31 06:14:55.558 43194 43194 I C02C03/PARAM_WATCHER: Add watcher keyPrefix accessibility.config.ready remoteWatcherId 1633 success
+01-31 06:14:55.558 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] focusWindowId: 0, realHostWindowId: 0
+01-31 06:14:55.558 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] [com.caidingding233.stratovirttest][entry][100000]: window focus
+01-31 06:14:55.558 43194 43194 I C02C03/PARAM_WATCHER: Add watcher keyPrefix debug.graphic.frame remoteWatcherId 1633 success
+01-31 06:14:55.559 43194 43194 E C03D00/cpu_boost: dev/flo open failed.
+01-31 06:14:55.559 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] ArkUIInvisibleFreeze: 0
+01-31 06:14:55.559 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] [com.caidingding233.stratovirttest][entry][100000]: SetMinPlatformVersion is 60002022
+01-31 06:14:55.559 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: RegisterAvoidAreaChangeListener: win 131
+01-31 06:14:55.560 43194 43194 E C04201/.caidingding233.stratovirttest/IMockSessionManager: [nodict]Read result failed, code is: 3.
+01-31 06:14:55.560 43194 43194 E C04201/.caidingding233.stratovirttest/IMockSessionManager: [nodict]Read result failed, code is: 5.
+01-31 06:14:55.561 43194 43339 I C04208/.caidingding233.stratovirttest/WMSLayout: UpdateRect: id:131 name:stratovirttest0 rect:[515 318 2090 1394]->[515 318 2090 1394] reason:23 displayId:0
+01-31 06:14:55.561 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: GetAvoidAreaByType: win [131 stratovirttest0] type 0 times 1 area empty
+01-31 06:14:55.561 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: GetAvoidAreaByType: win [131 stratovirttest0] type 1 times 2 area empty
+01-31 06:14:55.561 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: GetAvoidAreaByType: win [131 stratovirttest0] type 4 times 3 area empty
+01-31 06:14:55.561 43194 43194 I C03917/.caidingding233.stratovirttest/AceSafeArea: [(100000:100000:scope)] InitializeSafeArea systemInsets:SafeAreaInsets left_: [start: 0, end: 0], top_: [start: 0, end: 0], right_: [start: 0, end: 0], bottom_: [start: 0, end: 0], cutoutInsets:SafeAreaInsets left_: [start: 0, end: 0], top_: [start: 0, end: 0], right_: [start: 0, end: 0], bottom_: [start: 0, end: 0], navInsets:SafeAreaInsets left_: [start: 0, end: 0], top_: [start: 0, end: 0], right_: [start: 0, end: 0], bottom_: [start: 0, end: 0]
+01-31 06:14:55.562 43194 43194 I C0394E/.caidingding233.stratovirttest/AceWindow: [(100000:100000:scope)] Initialize displayId: 0, availableRect: [0, 75, 3120, 1880]
+01-31 06:14:55.562 43194 43194 I C02504/.caidingding233.stratovirttest/thp_extra: GetProcessName[68]name is: com.caidingding233.stratovirttest
+01-31 06:14:55.562 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]: Initialize: pages/Index
+01-31 06:14:55.562 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] RunPage:pages/Index
+01-31 06:14:55.562 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] GetAsset failed: manifest.json
+01-31 06:14:55.562 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: GetSurfaceNode: name:stratovirttest0, id:131
+01-31 06:14:55.563 43194 43319 I C03951/.caidingding233.stratovirttest/InputKeyFlow: [(-1:100000:singleton)] Subscribe touch.events.pass.through Event
+01-31 06:14:55.563 43194 43194 I C0421C/.caidingding233.stratovirttest/WMSCompat: RegisterNavigateCallbackForPageCompatibleModeIfNeed: content is nullptr or page is empty
+01-31 06:14:55.563 43194 43194 I C04200/.caidingding233.stratovirttest/WMS: InitUIContent: [0, 0]
+01-31 06:14:55.563 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: SetUIContentInner: single hand, id:131, posX:0, posY:0, scaleX:1.000000, scaleY:1.000000
+01-31 06:14:55.563 43194 43194 I C04219/.caidingding233.stratovirttest/WMSDecor: UpdateDecorEnable: decorVisible:1, id: 131
+01-31 06:14:55.563 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]: UpdateWindowVisible: 1, hasDecor: 1
+01-31 06:14:55.563 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAppUseControlStatus: isUseControl: 0, state_: 2, persistentId: 131
+01-31 06:14:55.563 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: in
+01-31 06:14:55.563 43194 43339 I C0420A/.caidingding233.stratovirttest/WMSLife: NotifyAfterLifecycleResumed: window has been in interactive status
+01-31 06:14:55.564 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]: NotifyWindowMode mode = 102
+01-31 06:14:55.564 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]: window foreground
+01-31 06:14:55.564 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] Update application state , state: ON_SHOW
+01-31 06:14:55.564 43194 43194 I C01406/.caidingding233.stratovirttest/OHOS::RS: RSSurfaceNode::SetAbilityState, surfaceNodeId:[185516817383425], ability state: foreground
+01-31 06:14:55.564 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] ArkUI requests first Vsync.
+01-31 06:14:55.564 43194 43194 I C04202/.caidingding233.stratovirttest/WMSMain: RequestVsync: First vsync has requested, nodeId: 185516817383425
+01-31 06:14:55.564 43194 43194 I C03925/.caidingding233.stratovirttest/AceRouter: [(100000:100000:scope)] window state change to show
+01-31 06:14:55.565 43194 43194 I C04219/.caidingding233.stratovirttest/WMSDecor: UpdateTitleButtonVisibility: [hideSplit, hideMaximize, hideMinimizeButton, hideCloseButton]:[0, 0, 0, 0]
+01-31 06:14:55.565 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: UpdateViewportConfig: Id: 131, reason: 0, windowRect: [515 318 2090 1394], displayOrientation: 1, config[0, 0, 0, 1.612500]
+01-31 06:14:55.565 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]: window focus
+01-31 06:14:55.565 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(-2:100000:singleton)] [com.caidingding233.stratovirttest][entry][100000]:window active
+01-31 06:14:55.565 43194 43194 W C01320/.caidingding233.stratovirttest/JsEnv: [source_map145]the stack without line info
+01-31 06:14:55.565 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.ace.trace.layout.enabled remoteWatcherId 1633 success
+01-31 06:14:55.565 43194 43194 I A00000/.caidingding233.stratovirttest/testTag: Succeeded in loading the content.
+01-31 06:14:55.565 43194 43194 I C04200/.caidingding233.stratovirttest/JsWindowStage: Window [131, stratovirttest0] load content end, ret=0
+01-31 06:14:55.565 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: NotifyAvoidAreaChange: win 131 api 22 type 0 area empty
+01-31 06:14:55.565 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: NotifyAvoidAreaChange: win 131 api 22 type 2 area empty
+01-31 06:14:55.565 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: NotifyAvoidAreaChange: win 131 api 22 type 3 area empty
+01-31 06:14:55.565 43194 43194 I C04209/.caidingding233.stratovirttest/WMSImms: NotifyAvoidAreaChange: win 131 api 22 type 4 area empty
+01-31 06:14:55.565 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: UpdateViewportConfig: Id: 131, reason: 0, windowRect: [515 318 2090 1394], displayOrientation: 1, config[0, 0, 0, 1.612500]
+01-31 06:14:55.565 43194 43194 I C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] Update application state , state: ON_ACTIVE
+01-31 06:14:55.566 43194 43194 I C01D02/.caidingding233.stratovirttest/accessibility_asacfwk: [(SubscribeStateObserver:551)]Observer has subscribed!
+01-31 06:14:55.566 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.ace.trace.inputevent.enabled remoteWatcherId 1633 success
+01-31 06:14:55.566 43194 43194 I C01D02/.caidingding233.stratovirttest/accessibility_asacfwk: [(SubscribeStateObserver:551)]Observer has subscribed!
+01-31 06:14:55.566 43194 43194 I C01D02/.caidingding233.stratovirttest/accessibility_asacfwk: [(SubscribeStateObserver:551)]Observer has subscribed!
+01-31 06:14:55.566 43194 43194 I C0391C/.caidingding233.stratovirttest/AceFocus: [(100000:100000:scope)] Window: 131 get focus.
+01-31 06:14:55.566 43194 43194 W C0391C/.caidingding233.stratovirttest/AceFocus: [(100000:100000:scope)] Current focus view can not found!
+01-31 06:14:55.566 43194 43194 I C0391C/.caidingding233.stratovirttest/AceFocus: [(100000:100000:scope)] Request focus on rootFocusHub: root/0
+01-31 06:14:55.566 43194 43194 I C04208/.caidingding233.stratovirttest/WMSLayout: UpdateViewportConfig: Id: 131, reason: 23, windowRect: [515 318 2090 1394], displayOrientation: 1, config[0, 0, 0, 1.612500]
+01-31 06:14:55.566 43194 43194 I C03925/.caidingding233.stratovirttest/AceRouter: [(100000:100000:scope)] Page router manager is creating page[1]: url: pages/Index path: pages/Index.js, recoverable: yes, namedRouter: no
+01-31 06:14:55.567 43194 43194 W C03F01/.caidingding233.stratovirttest/NAPI: [NMM:1177] First: failed do_dlsym failed: Symbol not found: NAPI_arkui_drawableDescriptor_GetABCCode, version: null so=/system/lib64/module/arkui/libdrawabledescriptor.z.so.Second: failed /system/lib64/module/virtservice/libvmmanager_napi.z.so not exist.load /system/etc/abc/virtservice/vmmanager.abc failed
+01-31 06:14:55.567 43194 43194 E C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] export objects of native so is undefined, so name is @ohos:virtService.vmManager
+01-31 06:14:55.567 43194 43194 W C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] Load native module failed: @ohos:virtService.vmManager
+01-31 06:14:55.568 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix const.security.developermode.state remoteWatcherId 1633 success
+01-31 06:14:55.568 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.ace.debug.statemgr.enabled remoteWatcherId 1633 success
+01-31 06:14:55.569 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.ace.debug.boundary.enabled remoteWatcherId 1633 success
+01-31 06:14:55.570 43194 43365 I C02C03/PARAM_WATCHER: Add watcher keyPrefix persist.ace.performance.monitor.enabled remoteWatcherId 1633 success
+01-31 06:14:55.575 43194 43194 W C03F00/.caidingding233.stratovirttest/ArkCompiler: [default] [Call] occur exception need return
+01-31 06:14:55.575 43194 43194 E C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] Pending exception before ExecutePendingJob called, in line:5942, exception details as follows:
+01-31 06:14:55.575 43194 43194 E C03F00/.caidingding233.stratovirttest/ArkCompiler: TypeError: Cannot read property on of undefined
+01-31 06:14:55.575 43194 43194 E C03F00/.caidingding233.stratovirttest/ArkCompiler:     at initVmEvents entry (entry/src/main/ets/pages/Index.ets:74:24)
+01-31 06:14:55.575 43194 43194 E C03F00/.caidingding233.stratovirttest/ArkCompiler:     at aboutToAppear entry (entry/src/main/ets/pages/Index.ets:70:10)
+01-31 06:14:55.575 43194 43194 W C03900/.caidingding233.stratovirttest/Ace: [(100000:100000:scope)] after call jsFunction hasError, empty: 0, caught: 1
+01-31 06:14:55.577 43194 43194 I C03F00/.caidingding233.stratovirttest/ArkCompiler: [ecmascript] Add reference, count: 1
+01-31 06:14:55.585 43194 43194 I C01356/.caidingding233.stratovirttest/Recovery: [app_recovery255]scheduleRecoverApp  begin
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD2051]
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: com.caidingding233.stratovirttest is about to exit due to RuntimeError
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: Error type:TypeError
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: Error name:TypeError
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: Error message:Cannot read property on of undefined
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: Stacktrace:
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit:     at initVmEvents entry (entry/src/main/ets/pages/Index.ets:74:24)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit:     at aboutToAppear entry (entry/src/main/ets/pages/Index.ets:70:10)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: HybridStack:
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #00 pc 00000000003b3e24 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #01 pc 0000000000214148 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #02 pc 00000000002138e0 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #03 pc 00000000002aaa18 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #04 pc 000000000073a654 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #05 pc 0000000000736168 /system/lib64/platformsdk/libark_jsruntime.so(panda::ecmascript::ObjectFactory::GetJSError(panda::ecmascript::base::ErrorType const&, char const*, panda::ecmascript::StackCheck)+152)(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #06 pc 000000000058fc28 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #07 pc 0000000000812e4c /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #08 pc 0000000000e2714c /system/lib64/module/arkcompiler/stub.an(RTStub_CallRuntime+44)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #09 pc 0000000000479ac8 /system/lib64/module/arkcompiler/stub.an(BCStub_HandleLdobjbynameImm8Id16StwCopy+5408)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #10 at initVmEvents entry (entry/src/main/ets/pages/Index.ets:74:24)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #11 at aboutToAppear entry (entry/src/main/ets/pages/Index.ets:70:10)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #12 pc 0000000000444a44 /system/lib64/platformsdk/libark_jsruntime.so(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #13 pc 000000000070c70c /system/lib64/platformsdk/libark_jsruntime.so(panda::FunctionRef::Call(panda::ecmascript::EcmaVM const*, panda::Local<panda::JSValueRef>, panda::Local<panda::JSValueRef> const*, int)+744)(e2443df427997f015ba1d0f7003507b2)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #14 pc 0000000000a11d90 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #15 pc 0000000000adc960 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #16 pc 0000000000b3892c /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #17 pc 0000000000b387f0 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #18 pc 0000000000a47950 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::CustomNode::Render(long)+860)(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #19 pc 0000000001c2054c /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::CustomNode::Build(std::__h::shared_ptr<std::__h::list<OHOS::Ace::NG::ExtraInfo, std::__h::allocator<OHOS::Ace::NG::ExtraInfo>>>)+64)(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #20 pc 0000000000a47398 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::UINode::Build(std::__h::shared_ptr<std::__h::list<OHOS::Ace::NG::ExtraInfo, std::__h::allocator<OHOS::Ace::NG::ExtraInfo>>>)+2288)(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #21 pc 00000000024abcbc /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::NG::StageManager::PushPage(OHOS::Ace::RefPtr<OHOS::Ace::NG::FrameNode> const&, bool, bool, std::__h::function<bool ()> const&&)+592)(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #22 pc 0000000001906fac /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #23 pc 0000000000c7f654 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #24 pc 0000000000c9030c /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #25 pc 0000000000c6d8b8 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #26 pc 0000000000c57964 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #27 pc 0000000000ec9704 /system/lib64/platformsdk/libace_compatible.z.so(a05b75547621c8b442e96358538cd6ae)
+01-31 06:14:55.585 43194 43194 E C01317/.caidingding233.stratovirttest/AppKit: #28 pc 000000000001bd8c /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventHandler::Distribut
+01-31 06:14:55.585 43194 43194 W C01317/.caidingding233.stratovirttest/AppKit: [MAINTHD2063]hisysevent write result=0, send event [FRAMEWORK,PROCESS_KILL], pid=43194, processName=com.caidingding233.stratovirttest, msg=Kill Reason:Js Error, foreground=1, isUncatchable=0
