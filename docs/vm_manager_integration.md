@@ -36,6 +36,11 @@
   - `ohos.permission.sec.ACCESS_UDID`
 - **即便 VM 已启动，后续操作仍可能触发权限校验**（例如窗口绑定、设备通道、数据通道），缺失权限会导致调用失败或 SA 被卸载。
 
+开发侧注意点：
+- `module.json5` 中需要声明 `requestPermissions`，并在 `usedScene` 写明使用场景
+- **权限声明 ≠ 一定能用**：`vm_manager` 还会校验 AccessToken/白名单，普通 HAP 可能直接被拦截
+- 若是系统应用，需要具备系统签名与系统级权限（`system_core` / `system_basic`）
+
 ### 2.3 独占窗口限制
 - VM View 通常 **单实例绑定窗口**  
 - 绑定失败会报 `The window already exists` / `WindowId err`  
@@ -63,6 +68,14 @@
    - `hdc shell "samgr list | grep 65621"`  
    - `hdc shell "hidumper -s 65621 | head -n 20"`  
 3) **/system 读权限不足**：`Permission denied` 仅代表当前 shell 无读权限，**不能证明文件不存在**。
+
+### 2.5 能力探测与版本兼容
+建议在运行期做能力探测与降级：
+- `checkVmCapability()`：用于判断当前设备/模式是否允许 VM
+- `getVmAvailableCpuNumRange()` / `getVmAvailableMemorySizeRange()`：用于探测硬件上限
+- `getVmDiskImagePath()` / `getVmDiskImageFileSize()`：用于确认镜像是否已导入
+
+若函数不存在或调用失败（如 `NOT_SUPPORT`），应退回到软件虚拟化/TCG 方案或提示设备不支持。
 
 ## 3. 生命周期与状态机
 
@@ -92,6 +105,39 @@
 - `checkVmCapability`, `checkVmWindowVisible`
 - `sendDataToVm`, `recvDataFromVm`
 
+### 4.1 接口签名与类型信息（基于反编译/字符串）
+> 说明：以下为 **已确认的函数名 + 推断的参数类型**。参数名以 NAPI key 及常见命名推断，**存在不确定项**。  
+> 对于不确定项已标记「待确认」。
+
+- `createVm(vmName: string, cfg: CfgInfo)`  
+  - C++ 层存在 `CreateVm(string, string, sptr<CfgInfo>)` 的签名，**第二个 string 的语义待确认**（可能是镜像名/模板名/配置名）。
+- `startVm(vmName: string, cfg: CfgInfo)`
+- `stopVm(vmName: string)` / `destroyVm(vmName: string)` / `forceStopVm(vmName: string)`
+- `getVmStatus(vmName: string): number`  
+  - C++ 层是 `GetVmStatus(string, int&)`，ArkTS 侧一般映射为 Promise resolve 数值。
+- `getVmDiskImagePath(vmName: string): string`
+- `getVmDiskImageFileSize(vmName: string): number`
+- `getVmDiskSize(vmName: string): number`
+- `setVmDiskSize(vmName: string, size: number)`
+- `importVmDiskImage(vmName: string, options: MigrationOptions | object)`  
+  - C++ 层存在 `ImportVmDiskImage(string, string, string, sptr<MigrationOptions>)`，**三个 string 的语义待确认**（可能是 srcPath/dstPath/alias）。
+  - NAPI 日志里明确出现 `guestOSImagePath`，说明参数对象内**存在该字段**（缺失会提示“failed to convert parameter to guestOSImagePath”）。
+- `exportVmDiskImage(vmName: string, options: MigrationOptions | object)`
+- `createVmView(vmName: string, windowId: number, width: number, height: number)`
+- `destroyVmView(windowId: number)`
+- `setVmViewSize(width: number, height: number)`
+- `mountCDDriveToVm(vmName: string, isoPath: string)` / `unmountCDDriveFromVm(vmName: string, isoPath: string)`
+
+### 4.2 异步模型与调用语义（待确认项与建议）
+NAPI/ArkTS 层的 **Promise/回调模型未在符号中直接体现**，建议以运行期方式确认：
+- 若返回对象存在 `then/catch`，即为 Promise；否则按回调或同步返回处理。
+- `createVm` 不一定等同于“已运行”，通常需监听 `vmStateChange`，等待进入 `STATE_RUNNING`。
+
+推荐做法：
+1) `await createVm(...)`  
+2) `await startVm(...)`  
+3) 监听 `vmStateChange`，确认 `STATE_RUNNING` 后再创建 VM View
+
 ## 5. 关键数据结构（示例字段）
 
 > 下列字段为常见配置项，实际支持情况与命名以系统版本为准。
@@ -106,6 +152,15 @@
 - `biosPath`（如 `stratovirt-uefi`）
 - `enhanceFilePath`（增强工具路径，若支持）
 
+常见类型推断：
+- `cpuNum`, `memorySize`, `diskSize`：`number`
+- `netMode`: `number | string`（常见 `MODE_NAT` / `MODE_BRIDGE`）
+- `bridgeIp`, `biosPath`, `enhanceFilePath`: `string`
+
+必选项与默认值（经验建议）：
+- 建议至少提供 `cpuNum` / `memorySize` / `diskSize`，否则可能触发 `SA_VM_START_PARAM_INVALID`
+- 其他字段默认值与可选性依赖系统版本，需在运行期验证
+
 ### 5.2 ChannelInfo（通道/设备）
 - `channelName`, `channelType`, `channels`
 - 设备对象字段：`graphicDevice`, `audioDevice`, `networkDevice`, `keyboardMouseDevice`,
@@ -116,6 +171,50 @@
 
 ### 5.4 USBDevice
 - `deviceId` / `deviceInfo`（常见日志提示“device id is empty”）
+
+### 5.5 NAPI 字段全集（从二进制抽取）
+> 下列为从 `libvmmanager_napi.z.so` 提取到的 **全部 lowerCamel 字段**，包含 API 名、事件名与对象字段。  
+> 其中部分字段语义未明（如 `cd9` 系列），建议按“存在字段”处理。
+
+**API / 动作名**
+- `createVm`, `startVm`, `stopVm`, `destroyVm`, `forceStopVm`
+- `getVmStatus`, `getVmDiskSize`, `getVmDiskImagePath`, `getVmDiskImageFileSize`
+- `setVmDiskSize`, `importVmDiskImage`, `exportVmDiskImage`
+- `createVmView`, `destroyVmView`, `setVmViewSize`
+- `createSnapshot`, `restoreSnapshot`, `destroySnapshot`, `renameSnapshot`, `getSnapshotList`
+- `mountCDDriveToVm`, `unmountCDDriveFromVm`, `mountUSBToVm`, `unmountUSBFromVm`
+- `checkVmCapability`, `checkVmWindowVisible`
+- `createChannel`, `sendDataToVm`, `recvDataFromVm`
+- `addSharedFolder`, `removeSharedFolder`
+- `getVmAvailableCpuNumRange`, `getVmAvailableMemorySizeRange`
+- `getHostSN`, `getFileDescriptorRequest`
+- `recoverUserData`
+- `setProxyAutoSyncEnabled`, `setVmNetProxyShareEnabled`
+- `isHostNetworkSyncFeatureEnabled`, `isVmNetProxyEnabled`
+
+**配置 / 参数对象字段**
+- `cpuNum`, `memorySize`, `diskSize`
+- `netMode`, `bridgeIp`
+- `biosPath`, `enhanceFilePath`
+- `snapshotTime`, `isKeepSnapshots`
+- `guestOSImagePath`（导入磁盘必需字段，缺失会报错）
+
+**Channel / Device 字段**
+- `channelInfo`, `channelName`, `channelType`, `channels`
+- `graphicDevice`, `audioDevice`, `networkDevice`, `keyboardMouseDevice`
+- `clipboardDevice`, `cameraDevice`, `storageDevice`
+- `inputDevice`, `outputDevice`, `memoryBalloonDevice`, `connectionDevice`
+
+**事件 / 回调名**
+- `vmStateChange`, `vmViewStateChange`
+- `vmDiskMigration`, `vmDiskExported`
+- `vmDataRecovery`, `tabletSwitchStateChange`
+
+**其他字段（语义未明/内部）**
+- `pasteboard`, `processUriInMultipleRecord`
+- `proxyAutoSyncEnabled`, `setResolutionFail`
+- `cD9`, `cd9`, `cd9H`, `cd9h`
+- `storageType`, `SystemShare`, `SYSTEM_SHARE`
 
 ## 6. 存储、镜像与 ISO
 
@@ -129,6 +228,32 @@
 ### 6.3 导入/导出磁盘
 - `importVmDiskImage(vmName, options)`
 - `exportVmDiskImage(vmName, options)`
+
+建议流程（使用自有 qcow2）：
+1) 将 qcow2 放入**系统允许读取的目录**（受权限/SELinux 约束）  
+2) 调用 `importVmDiskImage` 导入  
+3) 用 `getVmDiskImagePath` / `getVmDiskImageFileSize` 验证导入结果  
+4) `startVm` → `createVmView`
+
+注意：
+- `vm_manager` 通常不会直接使用任意路径，而是**导入到其受控目录**再启动  
+- 部分实现会做 **qcow2 → raw** 转换（日志中可见相关提示）
+
+参数推断（基于 NAPI 字符串）：
+- `guestOSImagePath: string`（必需，缺失会报 *failed to convert parameter to guestOSImagePath*）
+- `isKeepSnapshots?: boolean`
+- `snapshotTime?: number`
+- `diskSize?: number`
+
+路径校验（疑似白名单前缀，需实机验证）：
+- `file://docs/storage/Users/currentUser/`
+- `file://docs/storage/External/`
+- `/hmdfs/account/files/Docs/`
+- `/local/files/Docs/`
+- `/mnt/data/external/`
+- `/docs/storage/Users/currentUser/.VMDocs/.hwf_share/`
+
+若路径不合规，常见错误包括：`Invalid file path` / `Invalid path` / `share path is private sandbox path` / `share path is not authorized`。
 
 ### 6.4 ISO 挂载
 - `mountCDDriveToVm(vmName, isoPath)`
@@ -176,6 +301,33 @@
 - VM 状态监听、视图状态监听、磁盘迁移监听
 - 粘贴板与文件请求监听（guest/host 交互）
 
+### 9.1 事件 payload 获取方法（建议做法）
+事件 payload 字段在库中未显式暴露文档化信息，建议在实际运行时直接打印对象：
+```ts
+vmManager.on('vmStateChange', (evt: any) => {
+  console.info('[vmStateChange]', JSON.stringify(evt))
+})
+vmManager.on('vmViewStateChange', (evt: any) => {
+  console.info('[vmViewStateChange]', JSON.stringify(evt))
+})
+```
+
+常见枚举值（来自字符串与日志）：
+- VM 状态：`STATE_CREATE` / `STATE_STARTING` / `STATE_RUNNING` / `STATE_STOPPED` 等
+- View 状态：`vmViewStateChange`（具体值需运行期打印确认）
+
+### 9.2 状态/枚举（从二进制抽取）
+**VM 状态枚举**
+- `STATE_AVAILABLE`, `STATE_UNAVAILABLE`, `STATE_CREATE`, `STATE_STARTING`, `STATE_RUNNING`
+- `STATE_PAUSING`, `STATE_PAUSED`, `STATE_RESUMING`
+- `STATE_STOPPING`, `STATE_STOPPED`, `STATE_DESTROY`
+- `STATE_SNAPSHOTTING`, `STATE_UPDATE`, `STATE_VIEWING`, `STATE_ERROR`
+
+**网络与通道枚举**
+- `MODE_NAT`, `MODE_BRIDGE`
+- `ChannelType`（常见 `TYPE_USB`, `TYPE_VIRTIO`）
+- `NetMode`, `StorageType`, `EventType`, `VmErrorCode`, `VmState`, `VmViewState`
+
 ## 10. 增强工具与 WindowsFusion 通道
 
 增强工具主要用于：
@@ -185,6 +337,15 @@
 
 当前提供的是基础融合能力（窗口、输入、粘贴板、文件请求）。  
 如需应用级无缝融合或 NFC/ShareKit 转发，通常需要宿主应用自行集成。
+
+### 10.1 Channel/Device 协议说明（现有资料的边界）
+已知存在的对象/字段（来自 NAPI key）：
+- `ChannelInfo`: `channelName`, `channelType`, `channels`
+- 设备对象：`graphicDevice`, `audioDevice`, `networkDevice`, `keyboardMouseDevice`,
+  `clipboardDevice`, `cameraDevice`, `storageDevice`, `memoryBalloonDevice`
+- 数据通道：`sendDataToVm`, `recvDataFromVm`
+
+**协议格式未在库内显式公开**，需要结合 guest 侧“增强工具/融合服务”实现或通过运行时抓包确认。
 
 ## 11. 错误码（节选）
 
@@ -196,6 +357,16 @@
 - `SA_VM_MEMORY_LESS`
 - `SA_VM_DISK_LESS`
 - `STRATOVIRT_*` 系列错误（启动/渲染/设备）
+
+### 11.1 错误返回形态（待确认）
+错误数值与返回结构未在公开文档中给出，建议做法：
+- Promise 模式：`try/catch` 捕获异常对象，打印 `code` / `message`
+- 回调模式：在回调参数中打印 `err` 或 `status`
+
+可在日志中发现的典型失败文本：
+- `permission denied`（权限/白名单/AccessToken 拦截）
+- `WriteInterfaceToken failed`（IPC 失败）
+- `GetVmDiskImageFileSize failed`（镜像路径或权限问题）
 
 ## 12. 典型流程
 
@@ -217,6 +388,30 @@
 3. `FocusStateChangeEvent` 更新焦点  
 4. 必要时调整 `setVmViewSize` / `ModifyResolution`
 
+### 12.4 ArkTS 代码（create → start → view）
+```ts
+import vmManager from '@ohos.virtService.vmManager'
+
+const vmName = 'demo'
+const cfg = {
+  cpuNum: 2,
+  memorySize: 4096,
+  diskSize: 64 * 1024, // MB，具体单位需运行期确认
+  netMode: 'MODE_NAT',
+}
+
+try {
+  await vmManager.createVm(vmName, cfg)
+  await vmManager.startVm(vmName, cfg)
+  vmManager.on('vmStateChange', (evt: any) => {
+    console.info('state:', JSON.stringify(evt))
+  })
+  vmManager.createVmView(vmName, /*windowId*/ 1001, 1280, 720)
+} catch (e) {
+  console.error('vm error:', JSON.stringify(e))
+}
+```
+
 ## 13. 排错指南
 
 - **提示“not PC mode”**：需进入 PC 模式并满足姿态（支架/键盘）条件  
@@ -228,7 +423,14 @@
   - 结果：调用返回失败或被系统卸载 SA（`PostDelayUnloadSATask: Unload SystemAbility VmManager SA Task`）  
 - **`Load native module failed`**：优先排查 `virtservice` 模块是否随系统镜像打包，或被访问权限限制
 
-## 14. 参考文档（openEuler）
+## 14. 限制与测试建议
+
+- **资源上限**：以 `getVmAvailableCpuNumRange` / `getVmAvailableMemorySizeRange` 为准  
+- **磁盘大小**：建议先 `getVmDiskSize`，扩容用 `setVmDiskSize`  
+- **并发 View**：通常只允许单窗口绑定，建议做冲突处理  
+- **性能与稳定性**：建议测试矩阵覆盖 CPU/内存/磁盘大小、窗口尺寸与多次启动/停止
+
+## 15. 参考文档（openEuler）
 
 - StratoVirt 介绍  
   https://docs.openeuler.org/en/docs/22.03_LTS/docs/StratoVirt/StratoVirt_introduction.html  
